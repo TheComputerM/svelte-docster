@@ -1,0 +1,37 @@
+{
+  "props": {},
+  "slots": {},
+  "events": {},
+  "typedef": {
+    "RandomType": {
+      "value": "string | boolean",
+      "description": "cats > dogs"
+    },
+    "Nested": {
+      "value": "{key1: {key2?: boolean}}",
+      "description": "some description"
+    }
+  },
+  "restProps": null,
+  "all": [
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "typedef",
+          "name": "RandomType",
+          "type": "string | boolean",
+          "description": "cats > dogs",
+          "optional": false
+        },
+        {
+          "tag": "typedef",
+          "name": "Nested",
+          "type": "{key1: {key2?: boolean}}",
+          "description": "some description",
+          "optional": false
+        }
+      ]
+    }
+  ]
+}

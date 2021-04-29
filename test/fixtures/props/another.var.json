@@ -1,0 +1,27 @@
+{
+  "props": {
+    "prop1": {
+      "value": "'value'",
+      "valueType": "Literal",
+      "localName": "prop1",
+      "kind": "let",
+      "required": false,
+      "description": null,
+      "tags": []
+    },
+    "prop2": {
+      "value": "prop1",
+      "valueType": "Identifier",
+      "localName": "prop2",
+      "kind": "let",
+      "required": false,
+      "description": null,
+      "tags": []
+    }
+  },
+  "slots": {},
+  "events": {},
+  "typedef": {},
+  "restProps": null,
+  "all": []
+}

@@ -1,0 +1,28 @@
+{
+  "props": {},
+  "slots": {
+    "default": {
+      "type": "",
+      "description": "a simple description",
+      "attributes": {},
+      "content": "<slot />"
+    }
+  },
+  "events": {},
+  "typedef": {},
+  "restProps": null,
+  "all": [
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "slot",
+          "name": "default",
+          "type": "",
+          "description": "a simple description",
+          "optional": false
+        }
+      ]
+    }
+  ]
+}

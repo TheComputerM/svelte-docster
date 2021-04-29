@@ -1,0 +1,23 @@
+{
+  "props": {
+    "prop1": {
+      "value": "'value'",
+      "valueType": "Literal",
+      "localName": "prop1",
+      "kind": "const",
+      "required": false,
+      "description": "This is a prop.",
+      "tags": []
+    }
+  },
+  "slots": {},
+  "events": {},
+  "typedef": {},
+  "restProps": null,
+  "all": [
+    {
+      "description": "This is a prop.",
+      "tags": []
+    }
+  ]
+}

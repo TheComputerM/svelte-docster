@@ -1,0 +1,26 @@
+{
+  "props": {},
+  "slots": {},
+  "events": {
+    "button": {
+      "eventDetail": "{cool: boolean}",
+      "description": "A very cool event."
+    }
+  },
+  "typedef": {},
+  "restProps": null,
+  "all": [
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "event",
+          "name": "button",
+          "type": "{cool: boolean}",
+          "description": "A very cool event.",
+          "optional": false
+        }
+      ]
+    }
+  ]
+}

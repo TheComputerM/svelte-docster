@@ -1,0 +1,18 @@
+{
+  "props": {
+    "name": {
+      "value": "somevar",
+      "valueType": "Identifier",
+      "localName": "prop1",
+      "kind": "let",
+      "required": false,
+      "description": null,
+      "tags": []
+    }
+  },
+  "slots": {},
+  "events": {},
+  "typedef": {},
+  "restProps": null,
+  "all": []
+}

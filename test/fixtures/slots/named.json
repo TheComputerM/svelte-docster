@@ -1,0 +1,33 @@
+{
+  "props": {},
+  "slots": {
+    "slot1": {
+      "type": "",
+      "description": "some description",
+      "attributes": {
+        "name": {
+          "value": "slot1",
+          "valueType": "Text"
+        }
+      },
+      "content": "<slot name=\"slot1\"></slot>"
+    }
+  },
+  "events": {},
+  "typedef": {},
+  "restProps": null,
+  "all": [
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "slot",
+          "name": "slot1",
+          "type": "",
+          "description": "some description",
+          "optional": false
+        }
+      ]
+    }
+  ]
+}

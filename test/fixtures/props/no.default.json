@@ -1,0 +1,23 @@
+{
+  "props": {
+    "prop1": {
+      "value": null,
+      "valueType": null,
+      "localName": "prop1",
+      "kind": "let",
+      "required": true,
+      "description": "This is required.",
+      "tags": []
+    }
+  },
+  "slots": {},
+  "events": {},
+  "typedef": {},
+  "restProps": null,
+  "all": [
+    {
+      "description": "This is required.",
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "props": {},
+  "slots": {},
+  "events": {
+    "click": {
+      "description": null,
+      "eventDetail": "window",
+      "by": "Element",
+      "trigger": "button"
+    }
+  },
+  "typedef": {},
+  "restProps": null,
+  "all": []
+}

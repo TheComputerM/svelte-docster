@@ -1,0 +1,28 @@
+{
+  "props": {},
+  "slots": {},
+  "events": {},
+  "typedef": {},
+  "restProps": null,
+  "all": [
+    {
+      "description": "About component",
+      "tags": [
+        {
+          "tag": "component",
+          "name": "Button",
+          "type": "",
+          "description": "",
+          "optional": false
+        },
+        {
+          "tag": "example",
+          "name": "",
+          "type": "",
+          "description": "For example ```js import 'Component' ``` to import component.",
+          "optional": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "props": {
+    "type": {
+      "value": "\"warning\"",
+      "valueType": "Literal",
+      "localName": "type",
+      "kind": "let",
+      "required": false,
+      "description": "",
+      "tags": [
+        {
+          "tag": "component",
+          "type": "",
+          "name": "Alert",
+          "description": ""
+        },
+        {
+          "tag": "example",
+          "type": "",
+          "name": "",
+          "description": "<Alert>Hello</Alert>"
+        }
+      ]
+    }
+  },
+  "slots": {
+    "default": {
+      "type": null,
+      "description": null,
+      "attributes": {},
+      "content": "<slot>Default Content</slot>"
+    }
+  },
+  "events": {
+    "dismiss": {
+      "eventDetail": "{cool: boolean}",
+      "description": "when alert is dismissed"
+    }
+  },
+  "typedef": {
+    "AlertType": {
+      "value": "'warning' | 'info' | 'success'",
+      "description": ""
+    }
+  },
+  "restProps": "div",
+  "all": [
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "component",
+          "name": "Alert",
+          "type": "",
+          "description": "",
+          "optional": false
+        },
+        {
+          "tag": "example",
+          "name": "",
+          "type": "",
+          "description": "<Alert>Hello</Alert>",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "typedef",
+          "name": "AlertType",
+          "type": "'warning' | 'info' | 'success'",
+          "description": "",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "description": "Type of Alert.",
+      "tags": [
+        {
+          "tag": "type",
+          "name": "",
+          "type": "AlertType",
+          "description": "",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "event",
+          "name": "dismiss",
+          "type": "{cool: boolean}",
+          "description": "when alert is dismissed",
+          "optional": false
+        }
+      ]
+    }
+  ]
+}
