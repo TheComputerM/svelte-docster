@@ -104,7 +104,29 @@ You can see examples in the [examples](./examples) folder. The output structure 
 
   restProps: string,
 
-  all: 'All the JSDoc comments in the svelte file.'
+  all: 'All the JSDoc comments in the svelte file.',
+
+  // from context='module'
+  module: {
+    exportedVariable: {
+      value: string,
+      valueType: VariableType,
+      localName: string,
+      kind: 'let' | 'const' | 'function',
+      required: boolean,
+      description: string,
+      tags: [
+        {
+          tag: string,
+          type: string,
+          name: string,
+          description: string,
+        },
+        ...
+      ]
+    },
+    ...
+  }
 }
 ```
 
