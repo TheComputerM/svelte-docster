@@ -19,5 +19,6 @@
       "description": "This is required.",
       "tags": []
     }
-  ]
+  ],
+  "module": {}
 }

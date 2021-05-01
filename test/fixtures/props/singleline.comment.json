@@ -28,5 +28,6 @@
       "description": "this is the description",
       "tags": []
     }
-  ]
+  ],
+  "module": {}
 }

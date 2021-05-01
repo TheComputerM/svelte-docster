@@ -28,12 +28,15 @@ export default (options) => {
   });
 
   const jsast = (ast.instance && ast.instance.content) || "";
-
   const tags = extractTags(ast, content);
   const props = extractProps(jsast);
+
+  const moduleast = (ast.module && ast.module.content) || "";
+  const module = extractProps(moduleast);
 
   return {
     props,
     ...tags,
+    module,
   };
 };

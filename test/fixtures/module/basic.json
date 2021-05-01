@@ -1,0 +1,19 @@
+{
+  "props": {},
+  "slots": {},
+  "events": {},
+  "typedef": {},
+  "restProps": null,
+  "all": [],
+  "module": {
+    "doSomething": {
+      "value": "() => {}",
+      "valueType": "ArrowFunctionExpression",
+      "localName": "doSomething",
+      "kind": "const",
+      "required": false,
+      "description": "description",
+      "tags": []
+    }
+  }
+}
