@@ -1,7 +1,7 @@
-const { parse } = require("svelte/compiler");
+import { parse } from "svelte/compiler";
 
-const path = require("path");
-const fs = require("fs");
+import path from "path";
+import fs from "fs";
 
 import extractProps from "./extractProps";
 import extractTags from "./extractTags";

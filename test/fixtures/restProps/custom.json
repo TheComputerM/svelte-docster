@@ -4,6 +4,7 @@
   "events": {},
   "typedef": {},
   "restProps": "button | h1",
+  "styles": {},
   "all": [
     {
       "description": "",

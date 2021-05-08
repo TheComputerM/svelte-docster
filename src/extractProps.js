@@ -1,7 +1,7 @@
 import { walk, lookup } from "astray";
 import { generate as astring } from "astring";
 
-const { parse: parseComment } = require("comment-parser/lib");
+import { parse as parseComment } from "comment-parser/lib";
 
 function extractFromComment(node) {
   if (node.leadingComments) {

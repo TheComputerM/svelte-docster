@@ -1,0 +1,53 @@
+{
+  "props": {},
+  "slots": {},
+  "events": {},
+  "typedef": {},
+  "restProps": null,
+  "styles": {
+    "--some-var": {
+      "description": "Description of CSS variable",
+      "default": "'20px'",
+      "type": "string"
+    },
+    "--another-var": {
+      "description": "No default",
+      "default": null,
+      "type": ""
+    }
+  },
+  "all": [
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "style",
+          "name": "--some-var",
+          "type": "string",
+          "description": "Description of CSS variable",
+          "optional": false
+        },
+        {
+          "tag": "default",
+          "name": "'20px'",
+          "type": "",
+          "description": "",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "style",
+          "name": "--another-var",
+          "type": "",
+          "description": "No default",
+          "optional": false
+        }
+      ]
+    }
+  ],
+  "module": {}
+}

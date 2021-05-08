@@ -104,7 +104,16 @@ You can see examples in the [examples](./examples) folder. The output structure 
 
   restProps: string,
 
-  all: 'All the JSDoc comments in the svelte file.',
+  styles: {
+    styleName: {
+      description: string,
+      default: string,
+      type: string
+    },
+    ...
+  },
+
+  all: [array of all the JSDoc comments in the svelte file.],
 
   // from context='module'
   module: {

@@ -11,8 +11,9 @@ export default {
     {
       file: "dist/index.cjs",
       format: "cjs",
-      exports: "default"
+      exports: "default",
     },
   ],
   plugins: [nodeResolve(), terser()],
+  external: ["svelte/compiler", "comment-parser/lib"],
 };

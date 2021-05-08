@@ -21,6 +21,7 @@
   "events": {},
   "typedef": {},
   "restProps": null,
+  "styles": {},
   "all": [
     {
       "description": "This is an exported function.",

@@ -62,6 +62,7 @@
   },
   "typedef": {},
   "restProps": null,
+  "styles": {},
   "all": [
     {
       "description": "",
@@ -87,5 +88,6 @@
         }
       ]
     }
-  ]
+  ],
+  "module": {}
 }

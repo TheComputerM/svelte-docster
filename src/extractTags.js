@@ -1,5 +1,5 @@
-const { parse: parseComment } = require("comment-parser/lib");
-const { walk } = require("svelte/compiler");
+import { parse as parseComment } from "comment-parser/lib";
+import { walk } from "svelte/compiler";
 
 function getTagsFromComments(js) {
   const ast = parseComment(js);
@@ -8,12 +8,12 @@ function getTagsFromComments(js) {
     event: {},
     typedef: {},
     restProps: false,
+    styles: {},
     all: [],
   };
 
   ast.forEach((comment) => {
-
-    comment.tags.forEach((tag) => {
+    comment.tags.forEach((tag, i) => {
       switch (tag.tag) {
         case "slot":
           output.slot[tag.name] = {
@@ -35,6 +35,15 @@ function getTagsFromComments(js) {
           break;
         case "restProps":
           output.restProps = tag.type;
+          break;
+        case "style":
+          const tagWithDefaultValue = comment.tags[i + 1];
+          const tagHasDefaultValue = tagWithDefaultValue && tagWithDefaultValue.tag === 'default'
+          output.styles[tag.name] = {
+            description: tag.description,
+            default: tagHasDefaultValue ? tagWithDefaultValue.name : null,
+            type: tag.type
+          }
           break;
       }
     });
@@ -124,6 +133,7 @@ export default function (ast, content) {
     events,
     typedef: tags.typedef,
     restProps,
+    styles: tags.styles,
     all: tags.all,
   };
 }
