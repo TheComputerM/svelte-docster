@@ -4,6 +4,13 @@
   "description": "Generate metadata about your Svelte files from jsdoc.",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "node": "./dist/index.cjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
     "build": "rollup -c",
     "test": "node -r esm test/index.js",
