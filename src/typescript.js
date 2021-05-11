@@ -37,7 +37,9 @@ export default (options) => {
       } else {
         try {
           prop.type = typeof JSON.parse(prop.value);
-        } catch {}
+        } catch {
+          prop.type = null;
+        }
       }
     }
   }
