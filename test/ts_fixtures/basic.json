@@ -1,7 +1,7 @@
 {
   "props": {
     "class": {
-      "value": "''",
+      "value": "\"\"",
       "valueType": "Literal",
       "localName": "klass",
       "kind": "let",
@@ -10,7 +10,7 @@
       "tags": []
     },
     "prop": {
-      "value": "'value'",
+      "value": "\"value\"",
       "valueType": "Literal",
       "localName": "prop",
       "kind": "let",
@@ -18,6 +18,16 @@
       "description": "My prop description",
       "tags": [],
       "type": "string"
+    },
+    "autoinfer": {
+      "value": "123",
+      "valueType": "Literal",
+      "localName": "autoinfer",
+      "kind": "let",
+      "required": false,
+      "description": null,
+      "tags": [],
+      "type": "number"
     }
   },
   "slots": {},

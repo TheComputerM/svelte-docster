@@ -66,6 +66,8 @@ docster({
 });
 ```
 
+This add a new field to the output props: `output.props.propName.type`.
+
 ## Output
 
 You can see examples in the [examples](./examples) folder. The output structure looks something like this:

@@ -30,9 +30,14 @@ export default (options) => {
 
   for (const propName of Object.keys(docs.props)) {
     if (tsMetadata.has(propName)) {
-      const prop = tsMetadata.get(propName);
-      if (prop.type) {
-        docs.props[propName].type = prop.type;
+      const tsprop = tsMetadata.get(propName);
+      const prop = docs.props[propName];
+      if (tsprop.type) {
+        prop.type = tsprop.type;
+      } else {
+        try {
+          prop.type = typeof JSON.parse(prop.value);
+        } catch {}
       }
     }
   }
