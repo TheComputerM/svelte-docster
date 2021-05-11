@@ -6,7 +6,7 @@ export default [
     input: "src/index.js",
     output: [
       {
-        file: "dist/index.js",
+        file: "dist/index.mjs",
         format: "esm",
       },
       {
@@ -22,7 +22,7 @@ export default [
     input: "src/typescript.js",
     output: [
       {
-        file: "dist/typescript.js",
+        file: "dist/typescript.mjs",
         format: "esm",
       },
       {
@@ -32,6 +32,6 @@ export default [
       },
     ],
     plugins: [nodeResolve(), terser()],
-    external: ["svelte2tsx", "./index", "sucrase"],
+    external: ["svelte/compiler", "comment-parser/lib", "svelte2tsx", "sucrase"],
   },
 ];
