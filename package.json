@@ -2,18 +2,18 @@
   "name": "svelte-docster",
   "version": "1.2.1",
   "description": "Generate metadata about your Svelte files from jsdoc.",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "node": "./dist/index.cjs",
-      "require": "./dist/index.cjs"
+      "import": "./dist/esm/index.js",
+      "node": "./dist/cjs/index.js",
+      "require": "./dist/cjs/index.js"
     },
     "./typescript": {
-      "import": "./dist/typescript.mjs",
-      "node": "./dist/typescript.cjs",
-      "require": "./dist/typescript.cjs"
+      "import": "./dist/esm/typescript.js",
+      "node": "./dist/cjs/typescript.js",
+      "require": "./dist/cjs/typescript.js"
     }
   },
   "scripts": {

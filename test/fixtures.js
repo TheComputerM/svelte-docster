@@ -1,7 +1,7 @@
 const glob = require("tiny-glob/sync");
 const path = require("path");
-const sveltedoc = require("../dist/index.cjs");
-const sveltedocts = require('../dist/typescript.cjs');
+const sveltedoc = require("../dist/cjs/index.js");
+const sveltedocts = require('../dist/cjs/typescript.js');
 const { writeFileSync } = require("fs");
 
 glob("./test/fixtures/**/*.svelte", {}).forEach((file) => {
