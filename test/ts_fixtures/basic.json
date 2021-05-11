@@ -1,0 +1,39 @@
+{
+  "props": {
+    "class": {
+      "value": "''",
+      "valueType": "Literal",
+      "localName": "klass",
+      "kind": "let",
+      "required": false,
+      "description": "The classes add to the component.",
+      "tags": []
+    },
+    "prop": {
+      "value": "'value'",
+      "valueType": "Literal",
+      "localName": "prop",
+      "kind": "let",
+      "required": false,
+      "description": "My prop description",
+      "tags": [],
+      "type": "string"
+    }
+  },
+  "slots": {},
+  "events": {},
+  "typedef": {},
+  "restProps": null,
+  "styles": {},
+  "all": [
+    {
+      "description": "The classes add to the component.",
+      "tags": []
+    },
+    {
+      "description": "My prop description",
+      "tags": []
+    }
+  ],
+  "module": {}
+}

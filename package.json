@@ -9,6 +9,11 @@
       "import": "./dist/index.js",
       "node": "./dist/index.cjs",
       "require": "./dist/index.cjs"
+    },
+    "./typescript": {
+      "import": "./dist/typescript.js",
+      "node": "./dist/typescript.cjs",
+      "require": "./dist/typescript.cjs"
     }
   },
   "scripts": {
@@ -43,6 +48,8 @@
     "esm": "^3.2.25",
     "rollup": "^2.45.2",
     "rollup-plugin-terser": "^7.0.2",
+    "sucrase": "^3.18.1",
+    "svelte2tsx": "^0.1.189",
     "tiny-glob": "^0.2.8",
     "uvu": "^0.5.1"
   },
