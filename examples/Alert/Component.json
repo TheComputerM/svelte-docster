@@ -6,19 +6,13 @@
       "localName": "type",
       "kind": "let",
       "required": false,
-      "description": "",
+      "description": "Type of Alert.",
       "tags": [
         {
-          "tag": "component",
-          "type": "",
-          "name": "Alert",
-          "description": ""
-        },
-        {
-          "tag": "example",
-          "type": "",
+          "tag": "type",
+          "type": "AlertType",
           "name": "",
-          "description": "<Alert>Hello</Alert>"
+          "description": ""
         }
       ]
     }

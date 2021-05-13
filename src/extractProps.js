@@ -56,7 +56,6 @@ export default function (jsast) {
           const required = !variable.init;
           let value = null;
           let valueType = null;
-          console.log(parent);
           const { description, tags } = extractFromComment(parent);
 
           if (!required) {

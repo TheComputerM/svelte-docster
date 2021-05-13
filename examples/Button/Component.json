@@ -6,15 +6,8 @@
       "localName": "klass",
       "kind": "let",
       "required": false,
-      "description": "",
-      "tags": [
-        {
-          "tag": "slot",
-          "type": "",
-          "name": "default",
-          "description": "the default slot"
-        }
-      ]
+      "description": "Classes to add to the button.",
+      "tags": []
     },
     "variant": {
       "value": "\"primary\"",
