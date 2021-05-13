@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const sveltedoc = require("../dist/index.cjs");
+const sveltedoc = require("../dist/cjs/index.js");
 const glob = require('tiny-glob/sync');
 
 glob('**/*.svelte', {cwd: __dirname}).forEach((example) => {
