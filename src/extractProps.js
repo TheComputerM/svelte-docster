@@ -4,8 +4,8 @@ import { generate as astring } from "astring";
 import { parse as parseComment } from "comment-parser/lib";
 
 function extractFromComment(node) {
-  if (node.leadingComments) {
-    const commentObj = node.leadingComments[0];
+  if (Array.isArray(node.leadingComments)) {
+    const commentObj = node.leadingComments[node.leadingComments.length - 1];
     const isCommentLine = commentObj.type === "Line";
     const value = commentObj.value;
     const comment = isCommentLine ? `/** ${value} */` : `/*${value}*/`;
@@ -56,6 +56,7 @@ export default function (jsast) {
           const required = !variable.init;
           let value = null;
           let valueType = null;
+          console.log(parent);
           const { description, tags } = extractFromComment(parent);
 
           if (!required) {

@@ -1,0 +1,126 @@
+{
+  "props": {
+    "a": {
+      "value": "''",
+      "valueType": "Literal",
+      "localName": "a",
+      "kind": "let",
+      "required": false,
+      "description": "",
+      "tags": [
+        {
+          "tag": "type",
+          "type": "string",
+          "name": "",
+          "description": ""
+        }
+      ]
+    },
+    "c": {
+      "value": "''",
+      "valueType": "Literal",
+      "localName": "b",
+      "kind": "let",
+      "required": false,
+      "description": "",
+      "tags": [
+        {
+          "tag": "author",
+          "type": "",
+          "name": "TheComputerM",
+          "description": ""
+        },
+        {
+          "tag": "description",
+          "type": "",
+          "name": "MultipleTags",
+          "description": ""
+        },
+        {
+          "tag": "example",
+          "type": "",
+          "name": "3",
+          "description": "tags"
+        }
+      ]
+    },
+    "d": {
+      "value": "function d() {}",
+      "valueType": "FunctionDeclaration",
+      "localName": "d",
+      "kind": "function",
+      "required": false,
+      "description": "",
+      "tags": [
+        {
+          "tag": "description",
+          "type": "",
+          "name": "lol",
+          "description": ""
+        }
+      ]
+    }
+  },
+  "slots": {},
+  "events": {},
+  "typedef": {},
+  "restProps": null,
+  "styles": {},
+  "all": [
+    {
+      "description": "This has tags for props.",
+      "tags": []
+    },
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "type",
+          "name": "",
+          "type": "string",
+          "description": "",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "author",
+          "name": "TheComputerM",
+          "type": "",
+          "description": "",
+          "optional": false
+        },
+        {
+          "tag": "description",
+          "name": "MultipleTags",
+          "type": "",
+          "description": "",
+          "optional": false
+        },
+        {
+          "tag": "example",
+          "name": "3",
+          "type": "",
+          "description": "tags",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "description",
+          "name": "lol",
+          "type": "",
+          "description": "",
+          "optional": false
+        }
+      ]
+    }
+  ],
+  "module": {}
+}
