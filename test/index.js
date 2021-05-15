@@ -30,6 +30,7 @@ const files = [
   "slots/named",
   "slots/props",
   "styles/basic",
+  "styles/combined",
   "typedef/basic",
 ];
 

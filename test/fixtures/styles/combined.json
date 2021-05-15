@@ -1,0 +1,74 @@
+{
+  "slots": {},
+  "props": {},
+  "events": {},
+  "typedef": {},
+  "restProps": null,
+  "styles": {
+    "prop1": {
+      "description": "Description1",
+      "default": "1",
+      "type": ""
+    },
+    "prop2": {
+      "description": "Description2",
+      "default": "2",
+      "type": ""
+    },
+    "prop3": {
+      "description": "Description3",
+      "default": "3",
+      "type": ""
+    }
+  },
+  "all": [
+    {
+      "description": "",
+      "tags": [
+        {
+          "tag": "style",
+          "name": "prop1",
+          "type": "",
+          "description": "Description1",
+          "optional": false
+        },
+        {
+          "tag": "default",
+          "name": "1",
+          "type": "",
+          "description": "",
+          "optional": false
+        },
+        {
+          "tag": "style",
+          "name": "prop2",
+          "type": "",
+          "description": "Description2",
+          "optional": false
+        },
+        {
+          "tag": "default",
+          "name": "2",
+          "type": "",
+          "description": "",
+          "optional": false
+        },
+        {
+          "tag": "style",
+          "name": "prop3",
+          "type": "",
+          "description": "Description3",
+          "optional": false
+        },
+        {
+          "tag": "default",
+          "name": "3",
+          "type": "",
+          "description": "",
+          "optional": false
+        }
+      ]
+    }
+  ],
+  "module": {}
+}
