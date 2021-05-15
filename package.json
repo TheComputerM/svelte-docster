@@ -20,7 +20,6 @@
     "build": "rollup -c",
     "test": "node -r esm test/index.js",
     "examples": "npm run build && node examples/gen.js",
-    "test:update": "npm run build && node ./test/fixtures.js",
     "prepublishOnly": "npm run build"
   },
   "homepage": "https://github.com/TheComputerM/svelte-docster#readme",
@@ -50,7 +49,6 @@
     "rollup-plugin-terser": "^7.0.2",
     "sucrase": "^3.18.1",
     "svelte2tsx": "^0.1.189",
-    "tiny-glob": "^0.2.8",
     "uvu": "^0.5.1"
   },
   "peerDependencies": {
