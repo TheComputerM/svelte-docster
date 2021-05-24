@@ -5,7 +5,8 @@
   // is b
   let prop2 = 'value 2';
 
-  export { prop1 as a, prop2 as b};
+  export { prop1 as a, prop2 as b };
 </script>
 
-{prop1} {prop2}
+{prop1}
+{prop2}

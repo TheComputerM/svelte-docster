@@ -4,7 +4,7 @@
    */
   let prop1;
 
-  export {prop1 as prop2}
+  export { prop1 as prop2 };
 </script>
 
 {prop1}

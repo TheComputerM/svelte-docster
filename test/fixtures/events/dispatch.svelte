@@ -1,14 +1,15 @@
 <script>
   /**
    * @event {{cool: boolean}} button A very cool event.
-  */
-  import { createEventDispatcher } from "svelte";
+   */
+
+  import { createEventDispatcher } from 'svelte';
   const dispatch = createEventDispatcher();
 </script>
 
 <button
   on:click={() => {
-    dispatch("button", { cool: true });
+    dispatch('button', { cool: true });
   }}
 >
   Click

@@ -9,5 +9,5 @@
    * import 'Component'
    * ```
    * to import component.
-  */
+   */
 </script>

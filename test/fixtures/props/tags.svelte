@@ -15,7 +15,7 @@
    */
   let b = '';
 
-  export { b as c};
+  export { b as c };
 
   /**
    * @description lol
