@@ -53,7 +53,7 @@ You can see examples in the [examples](./examples) folder. The output structure 
   props: {
     propName: {
       value: string,
-      valueType: VariableType,
+      valueType: 'Literal' | 'Identifier' | 'FunctionDeclaration' | null,
       localName: string,
       kind: 'let' | 'const' | 'function',
       required: boolean,
@@ -122,7 +122,7 @@ You can see examples in the [examples](./examples) folder. The output structure 
   module: {
     exportedVariable: {
       value: string,
-      valueType: VariableType,
+      valueType: 'Literal' | 'Identifier' | 'FunctionDeclaration' | null,
       localName: string,
       kind: 'let' | 'const' | 'function',
       required: boolean,
