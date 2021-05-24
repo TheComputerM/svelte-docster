@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "fmt": "prettier . -w",
     "test": "node -r esm test/index.js",
     "examples": "npm run build && node examples/gen.js",
     "prepublishOnly": "npm run build"
@@ -40,6 +41,7 @@
     "astray": "^1.1.1",
     "astring": "^1.7.4",
     "esm": "^3.2.25",
+    "prettier": "^2.3.0",
     "rollup": "^2.45.2",
     "rollup-plugin-terser": "^7.0.2",
     "uvu": "^0.5.1"
@@ -49,5 +51,12 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "all",
+    "printWidth": 90,
+    "endOfLine": "lf"
+  }
 }

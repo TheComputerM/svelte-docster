@@ -30,17 +30,17 @@ npm i -D svelte-docster
 ## Usage
 
 ```js
-const docster = require("svelte-docster");
+const docster = require('svelte-docster');
 //or
-import docster from "svelte-docster";
+import docster from 'svelte-docster';
 
 docster({
   // provide either the full path to the svelte file
-  file: "full/path/to/file.svelte",
+  file: 'full/path/to/file.svelte',
 
   // or provide string content and the filename,
-  content: "<script> ... </script> Svelte file",
-  filename: "App.svelte",
+  content: '<script> ... </script> Svelte file',
+  filename: 'App.svelte',
 });
 ```
 
@@ -89,10 +89,10 @@ You can see examples in the [examples](./examples) folder. The output structure 
 
   events: {
     eventName: {
-      description: string,
       eventDetail: string,
-      by: NodeType,
-      trigger: string,
+      description: string,
+      by?: "Element" | "InlineComponent",
+      trigger?: string,
     },
     ...
   }

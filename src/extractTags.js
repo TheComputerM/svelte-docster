@@ -1,5 +1,5 @@
-import { parse as parseComment } from "comment-parser/lib";
-import { walk } from "svelte/compiler";
+import { parse as parseComment } from 'comment-parser/lib';
+import { walk } from 'svelte/compiler';
 
 function getTagsFromComments(js) {
   const ast = parseComment(js);
@@ -15,35 +15,36 @@ function getTagsFromComments(js) {
   ast.forEach((comment) => {
     comment.tags.forEach((tag, i) => {
       switch (tag.tag) {
-        case "slot":
+        case 'slot':
           output.slot[tag.name] = {
             type: tag.type,
             description: tag.description,
           };
           break;
-        case "event":
+        case 'event':
           output.event[tag.name] = {
             eventDetail: tag.type,
             description: tag.description,
           };
           break;
-        case "typedef":
+        case 'typedef':
           output.typedef[tag.name] = {
             value: tag.type,
             description: tag.description,
           };
           break;
-        case "restProps":
+        case 'restProps':
           output.restProps = tag.type;
           break;
-        case "style":
+        case 'style':
           const tagWithDefaultValue = comment.tags[i + 1];
-          const tagHasDefaultValue = tagWithDefaultValue && tagWithDefaultValue.tag === 'default'
+          const tagHasDefaultValue =
+            tagWithDefaultValue && tagWithDefaultValue.tag === 'default';
           output.styles[tag.name] = {
             description: tag.description,
             default: tagHasDefaultValue ? tagWithDefaultValue.name : null,
-            type: tag.type
-          }
+            type: tag.type,
+          };
           break;
       }
     });
@@ -65,18 +66,18 @@ function getTagsFromComments(js) {
 
 function getSlotValue(slot) {
   switch (slot.type) {
-    case "Text":
+    case 'Text':
       return slot.raw;
-    case "MustacheTag":
+    case 'MustacheTag':
       return slot.expression.raw;
-    case "AttributeShorthand":
+    case 'AttributeShorthand':
       return slot.expression.name;
   }
   return null;
 }
 
 export default function (ast, content) {
-  const jsast = (ast.instance && ast.instance.content) || "";
+  const jsast = (ast.instance && ast.instance.content) || '';
   const js = content.substring(jsast.start, jsast.end);
   const tags = getTagsFromComments(js);
 
@@ -85,10 +86,10 @@ export default function (ast, content) {
   let restProps = null;
   walk(ast.html, {
     enter(node) {
-      if (node.type === "Slot") {
+      if (node.type === 'Slot') {
         const attrs = node.attributes;
-        const nameAttr = attrs.find(({ name }) => name === "name");
-        const name = nameAttr ? nameAttr.value[0].data : "default";
+        const nameAttr = attrs.find(({ name }) => name === 'name');
+        const name = nameAttr ? nameAttr.value[0].data : 'default';
 
         slots[name] = {
           type: null,
@@ -104,20 +105,20 @@ export default function (ast, content) {
           }, {}),
           content: content.substring(node.start, node.end),
         };
-      } else if (["Element", "InlineComponent"].includes(node.type)) {
+      } else if (['Element', 'InlineComponent'].includes(node.type)) {
         node.attributes.forEach((attr) => {
-          if (attr.type === "EventHandler" && !attr.expression) {
+          if (attr.type === 'EventHandler' && !attr.expression) {
             events[attr.name] = {
+              eventDetail: node.type === 'Element' ? 'window' : null,
               description: null,
-              eventDetail: node.type === "Element" ? "window" : null,
               ...tags.event[attr.name],
               by: node.type,
               trigger: node.name,
             };
           } else if (
-            node.type === "Element" &&
-            attr.type === "Spread" &&
-            attr.expression.name === "$$restProps"
+            node.type === 'Element' &&
+            attr.type === 'Spread' &&
+            attr.expression.name === '$$restProps'
           ) {
             restProps = node.name;
           }

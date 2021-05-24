@@ -1,10 +1,10 @@
-import { parse } from "svelte/compiler";
+import { parse } from 'svelte/compiler';
 
-import path from "path";
-import fs from "fs";
+import path from 'path';
+import fs from 'fs';
 
-import extractProps from "./extractProps";
-import extractTags from "./extractTags";
+import extractProps from './extractProps';
+import extractTags from './extractTags';
 
 /**
  * @param {{file: string, content: string, filename: string}} options
@@ -21,17 +21,17 @@ export default (options) => {
   }
 
   const styleRegex = /<style(.)*>(.|\n)*<\/style>/;
-  const processed = content.replace(styleRegex, "");
+  const processed = content.replace(styleRegex, '');
   const ast = parse(processed, {
     filename,
     customElement: false,
   });
 
-  const jsast = (ast.instance && ast.instance.content) || "";
+  const jsast = (ast.instance && ast.instance.content) || '';
   const tags = extractTags(ast, content);
   const props = extractProps(jsast);
 
-  const moduleast = (ast.module && ast.module.content) || "";
+  const moduleast = (ast.module && ast.module.content) || '';
   const module = extractProps(moduleast);
 
   return {

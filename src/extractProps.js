@@ -1,26 +1,28 @@
-import { walk, lookup } from "astray";
-import { generate as astring } from "astring";
+import { walk, lookup } from 'astray';
+import { generate as astring } from 'astring';
 
-import { parse as parseComment } from "comment-parser/lib";
+import { parse as parseComment } from 'comment-parser/lib';
 
 function extractFromComment(node) {
   if (Array.isArray(node.leadingComments)) {
     const commentObj = node.leadingComments[node.leadingComments.length - 1];
-    const isCommentLine = commentObj.type === "Line";
-    const value = commentObj.value;
-    const comment = isCommentLine ? `/** ${value} */` : `/*${value}*/`;
-    const parsed = parseComment(comment)[0];
+    if (node.start - commentObj.end <= 3) {
+      const isCommentLine = commentObj.type === 'Line';
+      const value = commentObj.value;
+      const comment = isCommentLine ? `/** ${value} */` : `/*${value}*/`;
+      const parsed = parseComment(comment)[0];
 
-    if (parsed) {
-      return {
-        description: parsed.description,
-        tags: parsed.tags.map((tag) => ({
-          tag: tag.tag,
-          type: tag.type,
-          name: tag.name,
-          description: tag.description,
-        })),
-      };
+      if (parsed) {
+        return {
+          description: parsed.description,
+          tags: parsed.tags.map((tag) => ({
+            tag: tag.tag,
+            type: tag.type,
+            name: tag.name,
+            description: tag.description,
+          })),
+        };
+      }
     }
   }
 
@@ -39,15 +41,15 @@ export default function (jsast) {
     {
       ExportNamedDeclaration: {
         enter(node, state) {
-          state.set("is_exported", true);
+          state.set('is_exported', true);
         },
         exit(node, state) {
-          state.set("is_exported", false);
+          state.set('is_exported', false);
         },
       },
       VariableDeclaration(node, state) {
         // export let prop = value;
-        if (state.get("is_exported")) {
+        if (state.get('is_exported')) {
           const variable = node.declarations[0];
           const parent = node.path.parent;
           const kind = node.kind;
@@ -76,7 +78,7 @@ export default function (jsast) {
       },
       ExportSpecifier(node, state) {
         // export {localName as prop};
-        if (state.get("is_exported")) {
+        if (state.get('is_exported')) {
           const name = node.exported.name;
           const localName = node.local.name;
           const localNode = lookup(node, localName)[localName];
@@ -85,7 +87,7 @@ export default function (jsast) {
           let value = null;
           let valueType = null;
           let kind = null;
-          let description = "";
+          let description = '';
           let tags = [];
 
           if (localNode) {
@@ -114,7 +116,7 @@ export default function (jsast) {
       },
       FunctionDeclaration(node, state) {
         // export function prop() {}
-        if (state.get("is_exported")) {
+        if (state.get('is_exported')) {
           const parent = node.path.parent;
           const name = node.id.name;
 
@@ -124,7 +126,7 @@ export default function (jsast) {
             value: astring(node),
             valueType: node.type,
             localName: name,
-            kind: "function",
+            kind: 'function',
             required: false,
             description,
             tags,
@@ -132,7 +134,7 @@ export default function (jsast) {
         }
       },
     },
-    STATE
+    STATE,
   );
 
   return Object.fromEntries(output);
