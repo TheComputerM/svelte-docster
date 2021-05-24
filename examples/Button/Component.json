@@ -1,7 +1,7 @@
 {
   "props": {
     "class": {
-      "value": "\"\"",
+      "value": "''",
       "valueType": "Literal",
       "localName": "klass",
       "kind": "let",
@@ -10,7 +10,7 @@
       "tags": []
     },
     "variant": {
-      "value": "\"primary\"",
+      "value": "'primary'",
       "valueType": "Literal",
       "localName": "variant",
       "kind": "let",
@@ -47,8 +47,8 @@
   },
   "events": {
     "click": {
-      "description": null,
       "eventDetail": "window",
+      "description": null,
       "by": "Element",
       "trigger": "button"
     }

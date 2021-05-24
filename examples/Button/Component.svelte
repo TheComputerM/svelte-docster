@@ -4,14 +4,14 @@
    */
 
   // Classes to add to the button.
-  let klass = "";
+  let klass = '';
   export { klass as class };
 
   /**
    * Variant of the button.
    * @type {'primary' | 'secondary' | 'disabled'}
    */
-  export let variant = "primary";
+  export let variant = 'primary';
 </script>
 
 <button class="variant-{variant} {klass}" on:click>

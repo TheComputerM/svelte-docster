@@ -1,5 +1,5 @@
 <script>
-  import { createEventDispatcher } from "svelte";
+  import { createEventDispatcher } from 'svelte';
 
   /**
    * @component Alert
@@ -15,17 +15,16 @@
    * Type of Alert.
    * @type {AlertType}
    */
-  export let type = "warning";
+  export let type = 'warning';
 
   const dispatch = createEventDispatcher();
-
 
   /**
    * @event {{cool: boolean}} dismiss when alert is dismissed
    */
 
   function dismiss() {
-    dispatch("dismiss", { cool: true });
+    dispatch('dismiss', { cool: true });
   }
 </script>
 
