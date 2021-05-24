@@ -15,5 +15,5 @@ export default {
     },
   ],
   plugins: [nodeResolve(), terser()],
-  external: ['svelte/compiler', 'comment-parser/lib'],
+  external: ['svelte/compiler'],
 };

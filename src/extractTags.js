@@ -1,4 +1,4 @@
-import { parse as parseComment } from 'comment-parser/lib';
+import { parse as parseComment } from 'comment-parser/es6/index';
 import { walk } from 'svelte/compiler';
 
 function getTagsFromComments(js) {

@@ -1,7 +1,7 @@
 import { walk, lookup } from 'astray';
 import { generate as astring } from 'astring';
 
-import { parse as parseComment } from 'comment-parser/lib';
+import { parse as parseComment } from 'comment-parser/es6/index';
 
 function extractFromComment(node) {
   if (Array.isArray(node.leadingComments)) {

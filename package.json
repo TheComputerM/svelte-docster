@@ -33,13 +33,11 @@
   ],
   "author": "TheComputerM",
   "license": "MIT",
-  "dependencies": {
-    "comment-parser": "^1.1.5"
-  },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^11.2.1",
     "astray": "^1.1.1",
     "astring": "^1.7.4",
+    "comment-parser": "^1.1.5",
     "esm": "^3.2.25",
     "prettier": "^2.3.0",
     "rollup": "^2.49.0",
