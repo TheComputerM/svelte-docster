@@ -44,30 +44,6 @@ docster({
 });
 ```
 
-### With TypeScript
-
-```sh
-# You also have to install svelte2tsx and sucrase
-npm i -D svelte2tsx sucrase
-```
-
-```js
-const docster = require("svelte-docster/typescript");
-//or
-import docster from "svelte-docster/typescript";
-
-docster({
-  // provide either the full path to the svelte file
-  file: "full/path/to/file.svelte",
-
-  // or provide string content and the filename,
-  content: "<script> ... </script> Svelte file",
-  filename: "App.svelte",
-});
-```
-
-This add a new field to the output props: `output.props.propName.type`.
-
 ## Output
 
 You can see examples in the [examples](./examples) folder. The output structure looks something like this:

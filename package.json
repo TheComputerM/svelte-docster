@@ -9,11 +9,6 @@
       "import": "./dist/esm/index.js",
       "node": "./dist/cjs/index.js",
       "require": "./dist/cjs/index.js"
-    },
-    "./typescript": {
-      "import": "./dist/esm/typescript.js",
-      "node": "./dist/cjs/typescript.js",
-      "require": "./dist/cjs/typescript.js"
     }
   },
   "scripts": {
@@ -47,8 +42,6 @@
     "esm": "^3.2.25",
     "rollup": "^2.45.2",
     "rollup-plugin-terser": "^7.0.2",
-    "sucrase": "^3.18.1",
-    "svelte2tsx": "^0.1.189",
     "uvu": "^0.5.1"
   },
   "peerDependencies": {
