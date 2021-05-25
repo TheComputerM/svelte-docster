@@ -18,9 +18,11 @@
   export { b as c };
 
   /**
-   * @description lol
+   * Multiple line
+   * description
+   * @returns {"hello"}
    */
-  export function d() {}
+  export function d() {return "hello"}
 </script>
 
 {a}

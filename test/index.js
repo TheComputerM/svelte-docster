@@ -209,17 +209,17 @@ inspect('props/tags', (o) => {
       ],
     },
     d: {
-      value: 'function d() {}',
+      value: 'function d() {\n  return "hello";\n}',
       valueType: 'FunctionDeclaration',
       localName: 'd',
       kind: 'function',
       required: false,
-      description: '',
+      description: 'Multiple line description',
       tags: [
         {
-          tag: 'description',
-          type: '',
-          name: 'lol',
+          tag: 'returns',
+          type: '"hello"',
+          name: '',
           description: '',
         },
       ],
