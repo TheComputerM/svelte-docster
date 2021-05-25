@@ -1,6 +1,6 @@
 {
   "name": "svelte-docster",
-  "version": "1.2.3",
+  "version": "2.0.0",
   "description": "Generate metadata about your Svelte files from jsdoc.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
