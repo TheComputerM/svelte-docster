@@ -336,13 +336,11 @@ inspect('styles/basic', (o) => {
   compare(o.styles, {
     '--some-var': {
       description: 'Description of CSS variable',
-      default: "'20px'",
-      type: 'string',
+      default: '20px',
     },
     '--another-var': {
       description: 'No default',
-      default: null,
-      type: '',
+      default: '',
     },
   });
 });
@@ -352,17 +350,14 @@ inspect('styles/combined', (o) => {
     '--prop1': {
       description: 'Description1',
       default: '1',
-      type: '',
     },
     '--prop2': {
       description: 'Description2',
       default: '2',
-      type: '',
     },
     '--prop3': {
       description: 'Description3',
       default: '3',
-      type: '',
     },
   });
 });

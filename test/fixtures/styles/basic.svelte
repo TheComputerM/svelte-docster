@@ -1,7 +1,6 @@
 <script>
   /**
-   * @style {string} --some-var Description of CSS variable
-   * @default '20px'
+   * @style {20px} --some-var Description of CSS variable
    */
 
   /**

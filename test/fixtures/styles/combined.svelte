@@ -1,13 +1,10 @@
 <script>
   /**
-   * @style --prop1 Description1
-   * @default 1
+   * @style {1} --prop1 Description1
    *
-   * @style --prop2 Description2
-   * @default 2
+   * @style {2} --prop2 Description2
    *
    *
-   * @style --prop3 Description3
-   * @default 3
+   * @style {3} --prop3 Description3
    */
 </script>

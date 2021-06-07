@@ -37,13 +37,9 @@ function getTagsFromComments(js) {
           output.restProps = tag.type;
           break;
         case 'style':
-          const tagWithDefaultValue = comment.tags[i + 1];
-          const tagHasDefaultValue =
-            tagWithDefaultValue && tagWithDefaultValue.tag === 'default';
           output.styles[tag.name] = {
             description: tag.description,
-            default: tagHasDefaultValue ? tagWithDefaultValue.name : null,
-            type: tag.type,
+            default: tag.type,
           };
           break;
       }

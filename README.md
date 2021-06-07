@@ -46,8 +46,6 @@ docster({
 
 ## Output
 
-You can see examples in the [examples](./examples) folder. The output structure looks something like this:
-
 ```ts
 {
   props: {
@@ -138,6 +136,188 @@ You can see examples in the [examples](./examples) folder. The output structure 
       ]
     },
     ...
+  }
+}
+```
+
+## TOC
+
+- [Props](#props)
+- [Events](#events)
+- [Slots](#slots)
+- [Styles](#styles)
+- [restProps](#restprops)
+- [Typedef](#typedef)
+
+### Props
+
+```js
+/**
+ * This is the prop description.
+ * @type {string}
+ */
+export let propName = 'value';
+```
+
+**Output**
+
+```json
+{
+  "propName": {
+    "propName": {
+      "value": "'value'",
+      "valueType": "Literal",
+      "localName": "propName",
+      "kind": "let",
+      "required": false,
+      "description": "This is the prop description.",
+      "tags": [
+        {
+          "tag": "type",
+          "type": "string",
+          "name": "",
+          "description": ""
+        }
+      ]
+    }
+  }
+}
+```
+
+### Events
+
+```js
+/**
+ * @event {{cool: boolean}} button A very cool event.
+ */
+
+<button on:click></button>
+```
+
+**Output**
+
+```json
+{
+  "button": {
+    "eventDetail": "{cool: boolean}",
+    "description": "A very cool event."
+  },
+  "click": {
+    "eventDetail": "window",
+    "description": null,
+    "by": "Element",
+    "trigger": "button"
+  }
+}
+```
+
+### Slots
+
+```js
+/**
+ * @slot {{prop1:string;}} default
+ * @slot {{i:number;}} repeated
+ */
+
+<slot basic="prop" />
+{#each Array(10) as _, i}
+  <slot name="repeated" {i} />
+{/each}
+```
+
+**Output**
+
+```json
+{
+  "default": {
+    "type": "{prop1:string;}",
+    "description": "",
+    "attributes": {
+      "basic": {
+        "value": "prop",
+        "valueType": "Text"
+      }
+    },
+    "content": "<slot basic=\"prop\" />"
+  },
+  "repeated": {
+    "type": "{i:number;}",
+    "description": "",
+    "attributes": {
+      "name": {
+        "value": "repeated",
+        "valueType": "Text"
+      },
+      "i": {
+        "value": "i",
+        "valueType": "AttributeShorthand"
+      }
+    },
+    "content": "<slot name=\"repeated\" {i} />"
+  }
+}
+```
+
+### Styles
+
+```js
+/**
+ * @style {20px} --some-var Description of CSS variable
+ * @style --another-var No default
+ */
+```
+
+**Output**
+
+```json
+{
+  "--some-var": {
+    "description": "Description of CSS variable",
+    "default": "20px"
+  },
+  "--another-var": {
+    "description": "No default",
+    "default": ""
+  }
+}
+```
+
+### restProps
+
+```js
+/**
+ * @restProps {button | h1}
+ */
+```
+
+**Output**
+
+```json
+{
+  "restProps": "button | h1"
+}
+```
+
+### Typedef
+
+```js
+/**
+ * @typedef {string | boolean} RandomType cats > dogs
+ * @typedef {{key1: {key2?: boolean}}} Nested some description
+ */
+```
+
+**Output**
+
+```json
+{
+  "RandomType": {
+    "value": "string | boolean",
+    "description": "cats > dogs"
+  },
+  "Nested": {
+    "value": "{key1: {key2?: boolean}}",
+    "description": "some description"
   }
 }
 ```
