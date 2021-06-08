@@ -108,8 +108,7 @@ docster({
   styles: {
     styleName: {
       description: string,
-      default: string,
-      type: string
+      default: string
     },
     ...
   },
