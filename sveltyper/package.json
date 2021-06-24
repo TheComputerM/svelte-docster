@@ -1,0 +1,45 @@
+{
+  "name": "sveltyper",
+  "version": "1.0.2",
+  "description": "A tool to generate typescript declaration files for Svelte component.",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "build": "microbundle -f cjs,esm",
+    "test": "uvu -r jiti/register test",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "svelte",
+    "typescript",
+    "declaration",
+    "dts"
+  ],
+  "author": "TheComputerM",
+  "license": "MIT",
+  "homepage": "https://github.com/TheComputerM/svelte-docster/tree/main/sveltyper#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheComputerM/svelte-docster.git",
+    "directory": "svelte-docster"
+  },
+  "bugs": {
+    "url": "https://github.com/TheComputerM/svelte-docster/issues"
+  },
+  "dependencies": {
+    "svelte-docster": "workspace:^2.0.1"
+  },
+  "devDependencies": {
+    "astray": "^1.1.1",
+    "jiti": "^1.10.1",
+    "meriyah": "^4.1.5",
+    "microbundle": "^0.13.3",
+    "svelte": "^3.38.3",
+    "uvu": "^0.5.1",
+    "ts-dedent": "^2.1.1"
+  },
+  "files": [
+    "dist"
+  ]
+}

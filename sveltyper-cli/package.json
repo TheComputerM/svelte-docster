@@ -1,0 +1,28 @@
+{
+  "name": "sveltyper-cli",
+  "version": "1.0.0",
+  "description": "A CLI to generate typescript declaration files for Svelte component.",
+  "scripts": {
+    "test": "uvu -r jiti/register test"
+  },
+  "keywords": [
+    "svelte",
+    "typescript",
+    "declaration",
+    "dts"
+  ],
+  "author": "TheComputerM",
+  "license": "MIT",
+  "homepage": "https://github.com/TheComputerM/svelte-docster/tree/main/sveltyper-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheComputerM/svelte-docster.git",
+    "directory": "svelte-docster"
+  },
+  "bugs": {
+    "url": "https://github.com/TheComputerM/svelte-docster/issues"
+  },
+  "dependencies": {
+    "sveltyper": "workspace:^"
+  }
+}

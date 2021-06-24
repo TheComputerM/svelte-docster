@@ -1,47 +1,12 @@
 {
-  "name": "svelte-docster",
-  "version": "2.0.1",
-  "description": "Generate metadata about your Svelte files from jsdoc.",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "name": "root",
+  "private": true,
   "scripts": {
-    "build": "rollup -c",
-    "fmt": "prettier . -w",
-    "test": "node -r esm test/index.js",
-    "prepublishOnly": "npm run build"
+    "fmt": "prettier . -w"
   },
-  "homepage": "https://github.com/TheComputerM/svelte-docster#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TheComputerM/svelte-docster.git"
-  },
-  "bugs": {
-    "url": "https://github.com/TheComputerM/svelte-docster/issues"
-  },
-  "keywords": [
-    "svelte",
-    "jsdoc",
-    "doc"
-  ],
-  "author": "TheComputerM",
-  "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^11.2.1",
-    "astray": "^1.1.1",
-    "astring": "^1.7.4",
-    "comment-parser": "^1.1.5",
-    "esm": "^3.2.25",
-    "prettier": "^2.3.0",
-    "rollup": "^2.52.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "uvu": "^0.5.1"
+    "prettier": "^2.3.1"
   },
-  "peerDependencies": {
-    "svelte": "^3.38.2"
-  },
-  "files": [
-    "dist"
-  ],
   "prettier": {
     "singleQuote": true,
     "semi": true,
